@@ -1,0 +1,18 @@
+<h1>Build Resume</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <h2>Personal Info</h2>
+    {{ p_form.as_p }}
+
+    <h2>Education</h2>
+    {{ e_form.as_p }}
+
+    <h2>Skills</h2>
+    {{ s_form.as_p }}
+
+    <h2>Projects</h2>
+    {{ pr_form.as_p }}
+
+    <button type="submit">Save Resume</button>
+</form>

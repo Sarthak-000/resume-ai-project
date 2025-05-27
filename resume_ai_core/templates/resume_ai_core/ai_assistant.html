@@ -1,0 +1,11 @@
+<form method="post">
+  {% csrf_token %}
+  <label for="question">Ask about your resume:</label>
+  <input type="text" id="question" name="question" required />
+  <button type="submit">Ask AI</button>
+</form>
+
+{% if answer %}
+  <h3>AI Response:</h3>
+  <p>{{ answer }}</p>
+{% endif %}

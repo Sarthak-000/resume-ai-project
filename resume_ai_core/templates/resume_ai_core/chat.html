@@ -1,0 +1,12 @@
+<h1>Ask AI about {{ resume.name }}'s Resume</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <textarea name="question" rows="4" cols="50" placeholder="Ask a question about this resume..."></textarea><br>
+    <button type="submit">Ask AI</button>
+</form>
+
+{% if answer %}
+    <h2>AI Response:</h2>
+    <p>{{ answer }}</p>
+{% endif %}
